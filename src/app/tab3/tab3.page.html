@@ -1,17 +1,89 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 3
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
+    <ion-menu side="start" content-id="main-content">
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Menu</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-toolbar>
+        <ion-searchbar> </ion-searchbar>
+      </ion-toolbar>
+
+      <ion-content>
+        <ion-list>
+          <ion-item>
+            <ion-toolbar>
+              <ion-button  (click)="goToPage('categorias')">Categorias</ion-button>
+            </ion-toolbar>
+          </ion-item>
+
+          <ion-item>
+            <ion-toolbar>
+              <ion-button (click)="goToPage('ofertas')">Ofertas</ion-button>
+            </ion-toolbar>
+          </ion-item>
+
+          <ion-item>
+            <ion-toolbar>
+              <ion-button (click)="goToPage('shop')">Mis Compras</ion-button>
+            </ion-toolbar>
+          </ion-item>
+
+          <ion-item>
+            <ion-toolbar>
+              <ion-button  (click)="goToPage('ajustes')">Ajustes</ion-button>
+            </ion-toolbar>
+          </ion-item>
+
+          <ion-item>
+            <ion-toolbar>
+              <ion-button  (click)="goToPage('informacion-app')">Informacion de la App</ion-button>
+            </ion-toolbar>
+          </ion-item>
+
+          <ion-item>
+            <ion-toolbar>
+              <ion-button  (click)="goToPage('team')">Acerca de...</ion-button>
+            </ion-toolbar>
+          </ion-item>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+    <div class="ion-page" id="main-content">
+      <ion-header>
+        <ion-toolbar>
+          <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+          </ion-buttons>
+          <ion-searchbar></ion-searchbar>
+          <ion-buttons slot="end" >
+            <ion-icon name="basket"></ion-icon>
+          </ion-buttons>
+        </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
-</ion-content>
+
+
+
+
+
+    <ion-content>
+        <ion-tabs>
+          <ion-tab-bar slot="bottom">
+            <ion-tab-button tab="Inicio" [routerLink]="['/tabs/tab2']">
+              <ion-icon name="person-circle"></ion-icon>
+              <ion-label>Inicio</ion-label>
+            </ion-tab-button>
+
+            <ion-tab-button tab="Productos" [routerLink]="['/tabs/tab3']">
+              <ion-icon name="game-controller-outline"></ion-icon>
+              <ion-label>Productos</ion-label>
+            </ion-tab-button>
+
+            <ion-tab-button tab="Acerca de..." [routerLink]="['/tabs/tab4']">
+              <ion-icon name="information-circle"></ion-icon>
+              <ion-label>Acerca de...</ion-label>
+            </ion-tab-button>
+          </ion-tab-bar>
+        </ion-tabs>
+      </ion-content>

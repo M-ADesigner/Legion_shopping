@@ -1,17 +1,56 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<div class="row">
+  <div class="col">
+    <div class="text-center">
+      <h5 style="text-align: center;">Legion Shopping</h5>
+    </div>
+  </div>
+</div>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+<ion-content class="login">
+  <img class="logo" src="https://th.bing.com/th/id/R.ac92a80933802e54b8b4a194c3e83dac?rik=rA59S0FWraM9Nw&pid=ImgRaw&r=0">
+
+      <!--Usuario--->
+    <ion-row>
+      <ion-col col-12>
+        <ion-item>
+          <ion-input placeholder="Usuario"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <!--Contraseña-->
+    <ion-row>     <!--Remarca las lineas-->
+      <ion-col>  <!--Muestra la seaparacion entre inputs-->
+        <ion-item>
+          <ion-input placeholder="Contraseña"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+
+
+<ion-button expand="block" fill="outline">Iniciar</ion-button>
+
+
+        <!---Tabs-->
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="Inicio" [routerLink]="['/tabs/tab2']">
+        <ion-icon name="person-circle"></ion-icon>
+        <ion-label>Inicio</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="Productos" [routerLink]="['/tabs/tab3']">
+        <ion-icon name="game-controller-outline"></ion-icon>
+        <ion-label>Productos</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="Acerca de..." [routerLink]="['/tabs/tab4']">
+        <ion-icon name="information-circle"></ion-icon>
+        <ion-label>Acerca de...</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
 </ion-content>
+
